@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>COVID Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="box">
+    <h1>COVID Severity Prediction</h1>
+
+    <form action="/predict" method="post">
+        <input type="text" name="a" placeholder="Input 1" required>
+        <input type="text" name="b" placeholder="Input 2" required>
+        <input type="text" name="c" placeholder="Input 3" required>
+        <input type="text" name="d" placeholder="Input 4" required>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <h2>{{ prediction_text }}</h2>
+
+</div>
+
+</body>
+</html>
